@@ -1,6 +1,8 @@
 [versions]
-agp = "8.6.0-alpha07"
-kotlin = "1.9.0"
+#统一管理版本号
+agp = "9.1.1"
+kotlin = "2.2.10"
+ksp = "2.3.2"
 coreKtx = "1.10.1"
 junit = "4.13.2"
 junitVersion = "1.1.5"
@@ -10,6 +12,7 @@ activityCompose = "1.8.0"
 composeBom = "2024.04.01"
 
 [libraries]
+#管理程序使用的库
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -26,6 +29,10 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 
 [plugins]
+#管理 Gradle 插件
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+android-library = { id = "com.android.library", version.ref = "agp" }
