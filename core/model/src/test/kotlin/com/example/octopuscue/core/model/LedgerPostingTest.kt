@@ -23,6 +23,13 @@ class LedgerPostingTest {
     }
 
     @Test
+    fun createPostingWithBlankTransactionId() {
+        assertThrows(IllegalArgumentException::class.java) {
+            LedgerPosting("posting_001","      ","wechat",-5000L)
+        }
+    }
+
+    @Test
     fun createPostingWithBlankAccountId() {
         assertThrows(IllegalArgumentException::class.java) {
             LedgerPosting("posting_001","tx_001","      ",-5000L)
