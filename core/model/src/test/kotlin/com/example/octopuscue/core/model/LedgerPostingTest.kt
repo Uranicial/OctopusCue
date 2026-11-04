@@ -1,6 +1,6 @@
 package com.example.octopuscue.core.model
 
-import junit.framework.TestCase.assertEquals
+import org.junit.Assert.assertEquals
 import org.junit.Assert.assertThrows
 import org.junit.Test
 
