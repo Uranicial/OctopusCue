@@ -31,14 +31,16 @@ class MoneyTest {
     fun addMoneyWithDifferentCurrency() {
         val a = Money(1250L, "CNY")
         val b = Money(750L, "USD")
-        assertThrows(IllegalArgumentException::class.java) { a + b }
+        assertThrows(IllegalArgumentException::class.java)
+        { a + b }
     }
 
     @Test
     fun addMoneyOverflow() {
         val a = Money(Long.MAX_VALUE, "CNY")
         val b = Money(1L, "CNY")
-        assertThrows(ArithmeticException::class.java) { a + b }
+        assertThrows(ArithmeticException::class.java)
+        { a + b }
     }
 
     @Test
@@ -52,7 +54,8 @@ class MoneyTest {
     fun subtractMoneyWithDifferentCurrency() {
         val a = Money(1250L, "CNY")
         val b = Money(750L, "USD")
-        assertThrows(IllegalArgumentException::class.java) { a - b }
+        assertThrows(IllegalArgumentException::class.java)
+        { a - b }
     }
 
     @Test
@@ -66,7 +69,8 @@ class MoneyTest {
     fun subtractMoneyOverflow() {
         val a = Money(Long.MIN_VALUE, "CNY")
         val b = Money(1L, "CNY")
-        assertThrows(ArithmeticException::class.java) { a - b }
+        assertThrows(ArithmeticException::class.java)
+        { a - b }
     }
 
     @Test

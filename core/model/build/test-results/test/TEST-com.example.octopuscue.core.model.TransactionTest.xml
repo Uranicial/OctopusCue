@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.octopuscue.core.model.TransactionTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-11-04T09:18:39.905Z" hostname="URANIC-SINO" time="0.011">
+<testsuite name="com.example.octopuscue.core.model.TransactionTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-11-04T09:21:09.149Z" hostname="URANIC-SINO" time="0.002">
   <properties/>
-  <testcase name="createTransactionWithBlankId" classname="com.example.octopuscue.core.model.TransactionTest" time="0.008"/>
+  <testcase name="createTransactionWithBlankId" classname="com.example.octopuscue.core.model.TransactionTest" time="0.001"/>
   <testcase name="createTransactionWithoutMerchant" classname="com.example.octopuscue.core.model.TransactionTest" time="0.0"/>
   <testcase name="createValidTransaction" classname="com.example.octopuscue.core.model.TransactionTest" time="0.0"/>
   <testcase name="createTransactionWithBlankCurrency" classname="com.example.octopuscue.core.model.TransactionTest" time="0.0"/>

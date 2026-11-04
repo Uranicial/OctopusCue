@@ -2,6 +2,7 @@ package com.example.octopuscue.core.model
 
 import org.junit.Test
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNull
 import org.junit.Assert.assertThrows
 
 class TransactionTest {
@@ -60,9 +61,8 @@ class TransactionTest {
             TransactionStatus.POSTED,
             1000L,
             "CNY",
-            null
         )
 
-        assertEquals(null, transaction.merchant)
+        assertNull(transaction.merchant)
     }
 }

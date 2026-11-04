@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.octopuscue.core.model.LedgerPostingTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-11-04T09:18:39.920Z" hostname="URANIC-SINO" time="0.002">
+<testsuite name="com.example.octopuscue.core.model.LedgerPostingTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-11-04T09:21:09.137Z" hostname="URANIC-SINO" time="0.002">
   <properties/>
-  <testcase name="createPostingWithBlankId" classname="com.example.octopuscue.core.model.LedgerPostingTest" time="0.001"/>
+  <testcase name="createPostingWithBlankId" classname="com.example.octopuscue.core.model.LedgerPostingTest" time="0.0"/>
   <testcase name="createPostingWithBlankTransactionId" classname="com.example.octopuscue.core.model.LedgerPostingTest" time="0.0"/>
   <testcase name="createValidPosting" classname="com.example.octopuscue.core.model.LedgerPostingTest" time="0.0"/>
   <testcase name="createPostingWithZeroAmountMinor" classname="com.example.octopuscue.core.model.LedgerPostingTest" time="0.0"/>
-  <testcase name="createPostingWithBlankAccountId" classname="com.example.octopuscue.core.model.LedgerPostingTest" time="0.001"/>
+  <testcase name="createPostingWithBlankAccountId" classname="com.example.octopuscue.core.model.LedgerPostingTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
