@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.octopuscue.domain.engine.accounting.PostingValidatorTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-11-04T12:52:47.419Z" hostname="URANIC-SINO" time="0.02">
+<testsuite name="com.example.octopuscue.domain.engine.accounting.PostingValidatorTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-11-04T17:25:51.311Z" hostname="URANIC-SINO" time="0.023">
   <properties/>
-  <testcase name="acceptPostingsFromSameTransaction" classname="com.example.octopuscue.domain.engine.accounting.PostingValidatorTest" time="0.017"/>
+  <testcase name="acceptPostingsFromSameTransaction" classname="com.example.octopuscue.domain.engine.accounting.PostingValidatorTest" time="0.018"/>
   <testcase name="rejectPostingsFromAnotherTransaction" classname="com.example.octopuscue.domain.engine.accounting.PostingValidatorTest" time="0.001"/>
   <testcase name="rejectTransactionWithOnePosting" classname="com.example.octopuscue.domain.engine.accounting.PostingValidatorTest" time="0.0"/>
-  <testcase name="rejectTransactionWithoutPostings" classname="com.example.octopuscue.domain.engine.accounting.PostingValidatorTest" time="0.0"/>
+  <testcase name="rejectTransactionWithoutPostings" classname="com.example.octopuscue.domain.engine.accounting.PostingValidatorTest" time="0.001"/>
   <testcase name="rejectPostingWithUnknownAccount" classname="com.example.octopuscue.domain.engine.accounting.PostingValidatorTest" time="0.0"/>
+  <testcase name="acceptBalancedTransactionWithThreePostings" classname="com.example.octopuscue.domain.engine.accounting.PostingValidatorTest" time="0.0"/>
+  <testcase name="rejectUnbalancedPostingsWithLongOverflow" classname="com.example.octopuscue.domain.engine.accounting.PostingValidatorTest" time="0.0"/>
+  <testcase name="rejectUnbalancedPostings" classname="com.example.octopuscue.domain.engine.accounting.PostingValidatorTest" time="0.0"/>
+  <testcase name="rejectPostingWithCurrencyMismatch" classname="com.example.octopuscue.domain.engine.accounting.PostingValidatorTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -237,4 +237,248 @@ class PostingValidatorTest {
             result
         )
     }
+
+    @Test
+    fun rejectPostingWithCurrencyMismatch() {
+        val transaction = Transaction(
+            "tx_001",
+            TransactionKind.EXPENSE,
+            TransactionStatus.POSTED,
+            300,
+            "CNY",
+            "lunch"
+        )
+
+        val wechatAccount = LedgerAccount(
+            "001",
+            "微信零钱",
+            AccountType.ASSET,
+            "USD",
+            true
+        )
+
+        val diningAccount = LedgerAccount(
+            "002",
+            "餐饮费用",
+            AccountType.EXPENSE,
+            "CNY",
+            true
+        )
+
+        val posting_1 = LedgerPosting(
+            "posting_001",
+            "tx_001",
+            "002",
+            +3000L
+        )
+
+        val posting_2 = LedgerPosting(
+            "posting_002",
+            "tx_001",
+            "001",
+            -3000L
+        )
+
+        val result = PostingValidator().validate(
+            transaction,
+            listOf(posting_1, posting_2),
+            listOf(wechatAccount, diningAccount)
+        )
+
+        assertEquals(
+            PostingValidationResult.Invalid(
+                PostingValidationError.CURRENCY_MISMATCH,
+            ),
+            result
+        )
+    }
+
+    @Test
+    fun rejectUnbalancedPostings() {
+        val transaction = Transaction(
+            "tx_001",
+            TransactionKind.EXPENSE,
+            TransactionStatus.POSTED,
+            300,
+            "CNY",
+            "lunch"
+        )
+
+        val wechatAccount = LedgerAccount(
+            "001",
+            "微信零钱",
+            AccountType.ASSET,
+            "CNY",
+            true
+        )
+
+        val diningAccount = LedgerAccount(
+            "002",
+            "餐饮费用",
+            AccountType.EXPENSE,
+            "CNY",
+            true
+        )
+
+        val diningPosting = LedgerPosting(
+            "posting_001",
+            "tx_001",
+            "002",
+            +3000L
+        )
+
+        val wechatPosting = LedgerPosting(
+            "posting_002",
+            "tx_001",
+            "001",
+            -2000L
+        )
+
+        val result = PostingValidator().validate(
+            transaction,
+            listOf(wechatPosting, diningPosting),
+            listOf(wechatAccount, diningAccount)
+        )
+
+        assertEquals(
+            PostingValidationResult.Invalid(
+                PostingValidationError.UNBALANCED,
+            ),
+            result
+        )
+    }
+
+    @Test
+    fun acceptBalancedTransactionWithThreePostings() {
+        val transaction = Transaction(
+            "tx_001",
+            TransactionKind.EXPENSE,
+            TransactionStatus.POSTED,
+            300,
+            "CNY",
+            "lunch"
+        )
+
+        val wechatAccount = LedgerAccount(
+            "001",
+            "微信零钱",
+            AccountType.ASSET,
+            "CNY",
+            true
+        )
+
+        val diningAccount = LedgerAccount(
+            "002",
+            "餐饮费用",
+            AccountType.EXPENSE,
+            "CNY",
+            true
+        )
+
+        val cardAccount = LedgerAccount(
+            "003",
+            "银行卡",
+            AccountType.ASSET,
+            "CNY",
+            true
+        )
+
+        val diningPosting = LedgerPosting(
+            "posting_001",
+            "tx_001",
+            "002",
+            +5000L
+        )
+
+        val wechatPosting = LedgerPosting(
+            "posting_002",
+            "tx_001",
+            "001",
+            -3000L
+        )
+
+        val cardPosting = LedgerPosting(
+            "posting_003",
+            "tx_001",
+            "003",
+            -2000L
+        )
+
+        val result = PostingValidator().validate(
+            transaction,
+            listOf(wechatPosting, diningPosting,cardPosting),
+            listOf(wechatAccount, diningAccount, cardAccount)
+        )
+
+        assertEquals(
+            PostingValidationResult.Valid,
+            result
+        )
+    }
+
+    @Test
+    fun rejectUnbalancedPostingsWithLongOverflow() {
+        val transaction = Transaction(
+            "tx_001",
+            TransactionKind.EXPENSE,
+            TransactionStatus.POSTED,
+            200,
+            "CNY"
+        )
+
+        val Account1 = LedgerAccount(
+            "001",
+            "A",
+            AccountType.ASSET,
+            "CNY"
+        )
+
+        val Account2 = LedgerAccount(
+            "002",
+            "B",
+            AccountType.ASSET,
+            "CNY"
+        )
+
+        val Account3 = LedgerAccount(
+            "003",
+            "C",
+            AccountType.ASSET,
+            "CNY"
+        )
+
+        val posting1 = LedgerPosting(
+            id = "posting_001",
+            transactionId = "tx_001",
+            accountId = "001",
+            signedAmountMinor = Long.MAX_VALUE
+        )
+
+        val posting2 = LedgerPosting(
+            id = "posting_002",
+            transactionId = "tx_001",
+            accountId = "002",
+            signedAmountMinor = Long.MAX_VALUE
+        )
+
+        val posting3 = LedgerPosting(
+            id = "posting_003",
+            transactionId = "tx_001",
+            accountId = "003",
+            signedAmountMinor = 2L
+        )
+
+        val result = PostingValidator().validate(
+            transaction,
+            listOf(posting1, posting2, posting3),
+            listOf(Account1, Account2, Account3)
+        )
+
+        assertEquals(
+            PostingValidationResult.Invalid(
+                PostingValidationError.UNBALANCED,
+            ),
+            result
+        )
+    }
 }
