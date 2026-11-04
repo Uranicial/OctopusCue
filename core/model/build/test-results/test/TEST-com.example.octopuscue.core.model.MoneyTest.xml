@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.octopuscue.core.model.MoneyTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-11-03T13:34:19.669Z" hostname="URANIC-SINO" time="0.015">
+<testsuite name="com.example.octopuscue.core.model.MoneyTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-11-04T06:08:34.342Z" hostname="URANIC-SINO" time="0.007">
   <properties/>
-  <testcase name="createInvalidMoney" classname="com.example.octopuscue.core.model.MoneyTest" time="0.006"/>
-  <testcase name="addMoneyWithSameCurrency" classname="com.example.octopuscue.core.model.MoneyTest" time="0.001"/>
+  <testcase name="createInvalidMoney" classname="com.example.octopuscue.core.model.MoneyTest" time="0.001"/>
+  <testcase name="addMoneyWithSameCurrency" classname="com.example.octopuscue.core.model.MoneyTest" time="0.0"/>
   <testcase name="subtractMoneyWithNegativeResult" classname="com.example.octopuscue.core.model.MoneyTest" time="0.0"/>
   <testcase name="subtractMoneyDoesNotModifyOperands" classname="com.example.octopuscue.core.model.MoneyTest" time="0.0"/>
   <testcase name="addMoneyWithDifferentCurrency" classname="com.example.octopuscue.core.model.MoneyTest" time="0.004"/>
-  <testcase name="subtractMoneyWithSameCurrency" classname="com.example.octopuscue.core.model.MoneyTest" time="0.001"/>
-  <testcase name="subtractMoneyWithDifferentCurrency" classname="com.example.octopuscue.core.model.MoneyTest" time="0.0"/>
+  <testcase name="subtractMoneyWithSameCurrency" classname="com.example.octopuscue.core.model.MoneyTest" time="0.0"/>
+  <testcase name="subtractMoneyWithDifferentCurrency" classname="com.example.octopuscue.core.model.MoneyTest" time="0.001"/>
   <testcase name="createValidMoney" classname="com.example.octopuscue.core.model.MoneyTest" time="0.0"/>
   <testcase name="addMoneyOverflow" classname="com.example.octopuscue.core.model.MoneyTest" time="0.0"/>
   <testcase name="subtractMoneyOverflow" classname="com.example.octopuscue.core.model.MoneyTest" time="0.001"/>

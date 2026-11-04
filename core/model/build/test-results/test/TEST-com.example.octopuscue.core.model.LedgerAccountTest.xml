@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.octopuscue.core.model.LedgerAccountTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-11-04T06:08:34.330Z" hostname="URANIC-SINO" time="0.009">
+  <properties/>
+  <testcase name="createAccountWithDefaultActiveState" classname="com.example.octopuscue.core.model.LedgerAccountTest" time="0.007"/>
+  <testcase name="createValidAccount" classname="com.example.octopuscue.core.model.LedgerAccountTest" time="0.0"/>
+  <testcase name="createAccountWithBlankId" classname="com.example.octopuscue.core.model.LedgerAccountTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
