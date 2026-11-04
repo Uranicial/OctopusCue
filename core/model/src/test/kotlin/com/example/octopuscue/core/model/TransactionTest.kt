@@ -17,7 +17,7 @@ class TransactionTest {
         )
 
         assertEquals("tx_001", transaction.id)
-        assertEquals(TransactionKind.EXPENSE, transaction.status)
+        assertEquals(TransactionKind.EXPENSE, transaction.kind)
         assertEquals(TransactionStatus.POSTED, transaction.status)
         assertEquals(1000L,transaction.occurredAtEpochMs)
         assertEquals("CNY",transaction.currency)
