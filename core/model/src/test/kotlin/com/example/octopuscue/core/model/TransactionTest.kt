@@ -62,5 +62,7 @@ class TransactionTest {
             "CNY",
             null
         )
+
+        assertEquals(null, transaction.merchant)
     }
 }
