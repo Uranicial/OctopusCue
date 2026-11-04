@@ -6,7 +6,7 @@ import org.junit.Test
 
 class LedgerPostingTest {
     @Test
-    fun createVaildPosting() {
+    fun createValidPosting() {
         val ledgerPosting = LedgerPosting("posting_001","tx_001","wechat",-5000L)
 
         assertEquals("posting_001", ledgerPosting.id)
@@ -25,7 +25,7 @@ class LedgerPostingTest {
     @Test
     fun createPostingWithBlankAccountId() {
         assertThrows(IllegalArgumentException::class.java) {
-            LedgerPosting("posting_001","   ","wechat",-5000L)
+            LedgerPosting("posting_001","tx_001","      ",-5000L)
         }
     }
 
