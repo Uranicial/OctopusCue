@@ -5,6 +5,7 @@ import com.example.octopuscue.core.model.LedgerPosting
 import com.example.octopuscue.core.model.Transaction
 import java.math.BigInteger
 
+// 业务校验，判断一组分录是否合法
 class PostingValidator {
     fun validate(
         transaction: Transaction,
