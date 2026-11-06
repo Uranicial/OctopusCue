@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.octopuscue.domain.engine.accounting.AccountingServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-11-06T10:06:49.114Z" hostname="URANIC-SINO" time="0.041">
+  <properties/>
+  <testcase name="invalidTransactionDoesNotSave" classname="com.example.octopuscue.domain.engine.accounting.AccountingServiceTest" time="0.04"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

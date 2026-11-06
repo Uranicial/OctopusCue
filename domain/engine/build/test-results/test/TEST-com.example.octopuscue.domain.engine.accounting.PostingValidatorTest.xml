@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.octopuscue.domain.engine.accounting.PostingValidatorTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-11-04T17:25:51.311Z" hostname="URANIC-SINO" time="0.023">
+<testsuite name="com.example.octopuscue.domain.engine.accounting.PostingValidatorTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-11-06T10:06:49.158Z" hostname="URANIC-SINO" time="0.002">
   <properties/>
-  <testcase name="acceptPostingsFromSameTransaction" classname="com.example.octopuscue.domain.engine.accounting.PostingValidatorTest" time="0.018"/>
+  <testcase name="acceptPostingsFromSameTransaction" classname="com.example.octopuscue.domain.engine.accounting.PostingValidatorTest" time="0.0"/>
   <testcase name="rejectPostingsFromAnotherTransaction" classname="com.example.octopuscue.domain.engine.accounting.PostingValidatorTest" time="0.001"/>
   <testcase name="rejectTransactionWithOnePosting" classname="com.example.octopuscue.domain.engine.accounting.PostingValidatorTest" time="0.0"/>
-  <testcase name="rejectTransactionWithoutPostings" classname="com.example.octopuscue.domain.engine.accounting.PostingValidatorTest" time="0.001"/>
+  <testcase name="rejectTransactionWithoutPostings" classname="com.example.octopuscue.domain.engine.accounting.PostingValidatorTest" time="0.0"/>
   <testcase name="rejectPostingWithUnknownAccount" classname="com.example.octopuscue.domain.engine.accounting.PostingValidatorTest" time="0.0"/>
   <testcase name="acceptBalancedTransactionWithThreePostings" classname="com.example.octopuscue.domain.engine.accounting.PostingValidatorTest" time="0.0"/>
   <testcase name="rejectUnbalancedPostingsWithLongOverflow" classname="com.example.octopuscue.domain.engine.accounting.PostingValidatorTest" time="0.0"/>
